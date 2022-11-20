@@ -1,0 +1,28 @@
+.inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descripcionInicio{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif ;
+    gap: -50px;
+}
+
+.descripcionInicio h1{
+    background: #a20000;
+}
+
+.imgInicioPadre{
+    padding-right: 200px;
+    padding-top: 50px;
+}
+
+.imgInicio{
+        width: 700px;
+}

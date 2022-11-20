@@ -1,7 +1,7 @@
 import './App.css';
 import './components/Navbar.css'
-import {Routes, Route, Navigate} from 'react-router-dom'
-import Inicio from './components/Inicio';
+import {Routes, Route} from 'react-router-dom'
+import Inicio from './components/Inicio/Inicio';
 import Carta from './components/Carta';
 import Reservas from './components/Reservas';
 import Contacto from './components/Contacto';
@@ -20,8 +20,7 @@ function App() {
         <Route path='/carta' element={<Carta />}/>
         <Route path='/reservas' element={<Reservas />}/>
         <Route path='/contacto' element={<Contacto />}/>
-
-          {/* <Route path='*' element={<Navigate to='/Inicio'/>}/> */}
+        <Route path='*' element={<Inicio />}/>
 
       </Routes>
     </div>
