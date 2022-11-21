@@ -15,6 +15,9 @@ body{
     gap: 5px;
     padding: 20px 30px;
 }
+.nav{
+    color: #dfc15e;
+}
 
 .nav a{
     color: inherit;
@@ -31,7 +34,6 @@ body{
     padding: 0;
     margin: 0;
     list-style: none;
-
 }
 
 .nav li.active{
@@ -40,7 +42,7 @@ body{
 }
 
 .nav li:hover{
-    color: #009737;
+    color: #ffffff;
     transform: scale(1.1);
     transition: 0.1s;
 

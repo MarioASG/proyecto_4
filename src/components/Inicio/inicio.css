@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    padding: 100px;    
 }
 .descripcionInicio{
     display: flex;
@@ -31,7 +32,6 @@
 }
 
 .imgInicioPadre{
-    padding-top: 50px;
     margin-left: 400px;
 
 }
@@ -42,3 +42,32 @@
         box-shadow: 0 15px 15px #000000;
         
 }
+
+/* SECCIÓN HISTORIA */
+
+.historiaInicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px; 
+    text-align: center;
+}
+
+.historiaInicio img{
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 15px 15px #000000;
+}
+
+.historiaInicio p{
+    width: 800px;
+    color: aliceblue;
+}
+
+.historiaInicio h1, h3{
+    color: #dfc15e;
+}
+
