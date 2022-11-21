@@ -3,23 +3,24 @@ import './inicio.css'
 
 const Inicio = () => {
   return (
-    <div className='inicio'>
-      <div className='descripcionInicio'>
+    <div>
+      <div className='descripcionInicioPadre'>
+        <div className='descripcionInicio'>
         <h1>
           BAR BOOTCAMP
         </h1>
         <h2>
-          EL PRIMER Y ÚNICO TEMPLO DEL PALCER
+          PARA VIVIR EL PRESENTE
         </h2>
         <h2>
-          PARA VIVIR EL PRESENTE, HAY QUE BEBERSE EL PASADO
+          HAY QUE BEBERSE EL PASADO
         </h2>
+        </div>
+        <div className='imgInicioPadre'>
+        <img src='assets/3.png' className='imgInicio'/>
+        </div>
 
       </div>
-      <div className='imgInicioPadre'>
-        <img src='assets/3.png' className='imgInicio'/>
-      </div>
-      
     </div>
   )
 }
