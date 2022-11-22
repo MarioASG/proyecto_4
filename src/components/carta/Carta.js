@@ -1,9 +1,14 @@
 import React from 'react'
+import ListaDrinks from './listaDrinks';
 
 const Carta = () => {
+
   return (
     <div>
-      Carta
+
+      <ListaDrinks/>
+      
+
     </div>
   )
 }

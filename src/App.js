@@ -2,9 +2,9 @@ import './App.css';
 import './components/Navbar/Navbar.css';
 import {Routes, Route} from 'react-router-dom'
 import Inicio from './components/Inicio/Inicio';
-import Carta from './components/Carta';
-import Reservas from './components/Reservas';
-import Contacto from './components/Contacto';
+import Carta from './components/carta/Carta';
+import Reservas from './components/reservas/Reservas';
+import Contacto from './components/contacto/Contacto';
 import Navbar from './components/Navbar/Navbar';
 import { Fragment } from 'react';
 
