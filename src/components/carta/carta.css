@@ -1,6 +1,11 @@
 .listaDrinks{
-    display: flex;
+    display: grid;
     flex-direction: row;
     gap: 20px;
     padding: 20px;
+    display: grid;
+    grid-template-areas:
+    'a b c'
+    'd e f'
+    'g h 1';
 }
