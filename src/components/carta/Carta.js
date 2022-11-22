@@ -1,5 +1,6 @@
 import React from 'react'
 import ListaDrinks from './listaDrinks';
+import './carta.css';
 
 const Carta = () => {
 
@@ -8,7 +9,6 @@ const Carta = () => {
 
       <ListaDrinks/>
       
-
     </div>
   )
 }
