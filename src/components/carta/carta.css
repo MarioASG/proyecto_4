@@ -12,7 +12,7 @@
 
 .carta{
     /* background: #000; */
-    height: 600px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,6 +21,7 @@
     background-image: url(https://wallpaperaccess.com/full/804379.jpg);
     background-repeat: no-repeat;
     background-position: cover;
+    padding-top: 100px;
 }
 
 .cartaPadre h1{

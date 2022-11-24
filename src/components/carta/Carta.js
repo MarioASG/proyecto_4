@@ -17,11 +17,11 @@ const Carta = () => {
           <div className='presentacionCarta'>
                 <Link to='/carta/bebidas' className='listaCarta'>
                     <h3>BEBIDAS</h3>
-                    <img src="assets/drinks/tragos.png" alt="na" className='imgTarjeta' />
+                    <img src="/assets/drinks/tragos.png" alt="na" className='imgTarjeta' />
                 </Link>
                 <Link to='/carta/comida' className='listaCarta'>
                 <h3>COMIDAS</h3>
-                <img src="assets/drinks/HTMLSour.png" alt="na" className='imgTarjeta' />
+                <img src="/assets/foods/comidas.png" alt="na" className='imgTarjeta' />
                 </Link>
           </div>
         </div>

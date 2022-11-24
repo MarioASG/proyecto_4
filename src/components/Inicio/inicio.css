@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 100px;    
+    padding: 100px;
+    padding-top: 200px;
 }
 .descripcionInicio{
     display: flex;

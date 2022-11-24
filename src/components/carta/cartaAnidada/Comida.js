@@ -1,11 +1,11 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import ListaDrinks from '../ListaDrinks'
+import ListaFoods from '../ListaFoods'
 
 const Comida = () => {
   return (
     <div>
-      <ListaDrinks/>
+      <ListaFoods/>
     </div>
   )
 }

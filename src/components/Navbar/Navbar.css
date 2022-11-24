@@ -14,9 +14,9 @@ body{
     align-items: center;
     gap: 5px;
     padding: 20px 30px;
-}
-.nav{
     color: #dfc15e;
+    position: fixed;
+    width: 100%;
 }
 
 .nav a{
