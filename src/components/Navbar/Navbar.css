@@ -19,12 +19,17 @@ body{
     width: 100%;
 }
 
+.logoNav{
+    width: 85px;
+    border-radius: 50%;
+}
+
 .nav a{
     color: inherit;
     text-decoration: none;
 }
 
-.bar-bootcamp{
+.bar-bootcamp, .bar-inicio{
     font-size: 50px;
 }
 

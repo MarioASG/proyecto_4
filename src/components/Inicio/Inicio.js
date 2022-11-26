@@ -1,6 +1,5 @@
 import React from 'react'
-import './inicio.css'
-
+import './inicio.css';
 const Inicio = () => {
   return (
     <div>
@@ -17,17 +16,20 @@ const Inicio = () => {
         </div>
 
       </div>
-
+      
+      <section className='seccionHistoria'>
       <div className='historiaInicio'>
         <h1>NUESTRA HISTORIA</h1>
-        <p>Una casa patrimonial en toma, dos pisos de rescate e intervención cargados de 1124 
-          litros de alcohol. Somos sangre viva, mente abierta. Y por eso estamos acá, armados hasta los 
-          dientes de hiperactividad. De déficit atencional. SOMOS BAR BOOTCAMP hasta las recachas, aqui cabemos 
-          todos, lugar hay...si es de los nuestros Pa´dentro mierda ¡¡¡ SALUUUU !!!!</p>
+        <p>Antigua fortaleza erigida sobre una roca de origen volcánico ubicada en el centro
+           de la ciudad de Santiago, Chile. Aunque existen restos humanos desde la Edad del 
+           Hierro, el primer Pub se construyó durante el reinado de David I (r. 1124-1153) 
+           y continuó como residencia real hasta 1633, para finalmente convertirse en lo que 
+           hoy conocemos como Bar BootCamp</p>
         <img src='assets/Logo.png' className='logo'/>
         <h3>SANTIAGO, CHILE</h3>
 
       </div>
+      </section>
     </div>
   )
 }

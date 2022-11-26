@@ -7,7 +7,9 @@ const Navbar = () => {
     <nav className='nav'>
         <Link to='/' className='bar-bootcamp'>
             Bar BootCamp
+            
         </Link>
+        <img src='assets/Logo.png' className='logoNav'/>
         <ul>
 
             <CustomLink to='/'>Inicio</CustomLink>
