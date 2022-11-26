@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Row, Col, Form, Button, Container } from "react-bootstrap";
-import { COLECCION, guardarReserva, leerReservas } from "./ReservasDB";
+import { COLECCION, guardarReserva } from "./ReservasDB";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./reservas.css";
 
@@ -11,30 +11,27 @@ const correoCliente = React.createRef();
 const fechaReserva = React.createRef();
 
 const FormularioReservas = () => {
-  const [setReservas] = React.useState([]);
-
   const agregarReserva = async () => {
-    await guardarReserva(
-      COLECCION,
-      nombreCliente.current.value,
-      correoCliente.current.value,
-      cantidadPersonas.current.value,
-      fechaReserva.current.value
-    )
-      .then(() => {
-        leerReservas(COLECCION).then((data) => {
-          setReservas(data);
-        });
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    try {
+      await guardarReserva(
+        COLECCION,
+        nombreCliente.current.value,
+        correoCliente.current.value,
+        parseInt(cantidadPersonas.current.value),
+        fechaReserva.current.value
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <Container className="tusReservas">
       <Container className="tituloReservas">
-      <p>Aquí podrás hacer una reserva. Solo dinos el número de personas, y tendremos una mesa lista para ti</p>
+        <p>
+          Aquí podrás hacer una reserva. Solo dinos el número de personas, y
+          tendremos una mesa lista para ti
+        </p>
       </Container>
       <Row className="justify-content-md-center">
         <Col xs lg="6">
@@ -59,6 +56,7 @@ const FormularioReservas = () => {
               <Form.Control
                 ref={cantidadPersonas}
                 type="number"
+                defaultValue={0}
                 placeholder="Cantidad de Personas"
                 required
               ></Form.Control>
@@ -75,7 +73,7 @@ const FormularioReservas = () => {
               <Button
                 onClick={() => agregarReserva()}
                 variant="warning"
-                type="submit"
+                type="button"
               >
                 Reserva!!
               </Button>

@@ -1,5 +1,5 @@
 import React from 'react'
-import ListaDrinks from './ListaDrinks'
+import ListaDrinks from './listaDrinks'
 
 const Bebidas = () => {
   return (

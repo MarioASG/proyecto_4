@@ -49,7 +49,7 @@ export default function TusReservas() {
           ></Form.Control>
         </Form.Group>
         <Form.Group className="mb-3 btn" id="querySubmit">
-        <Button variant="warning" type="submit" onClick={ () => obtenerReservaciones( queryCliente.current.value.toUpperCase(), queryCorreo.current.value.toLowerCase() ) }>Solicitar Información</Button>
+        <Button variant="warning" type="button" onClick={ () => obtenerReservaciones( queryCliente.current.value.toUpperCase(), queryCorreo.current.value.toLowerCase() ) }>Solicitar Información</Button>
         </Form.Group>
         
       </Form>
