@@ -5,7 +5,7 @@ const NavbarCarta = () => {
   return (
     
     <nav className='nav'>
-        <Link to='/' className='bar-bootcamp'>
+        <Link to='/' className='bar-inicio'>
             ← Inicio
         </Link>
         <ul>

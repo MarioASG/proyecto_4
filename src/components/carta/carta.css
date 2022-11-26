@@ -11,7 +11,6 @@
 }
 
 .carta{
-    /* background: #000; */
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -58,5 +57,21 @@
     height: 50px;
 }
 
-
-
+/* Querys */
+    
+    @media screen and (max-width: 990px){
+        .cartaPadre h1{
+            font-size: 20px;
+        }
+        .presentacionCarta{
+            flex-direction: column;
+        }
+        .carta{
+            height: 1100px;
+        }
+    }
+    @media screen and (max-width: 770px){
+        .cartaPadre h1, .listaCarta h3{
+            font-size: 14px;
+        }
+    }

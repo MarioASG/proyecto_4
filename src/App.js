@@ -9,12 +9,18 @@ import Navbar from './components/Navbar/Navbar';
 import Bebidas from './components/carta/cartaAnidada/Bebidas';
 import Comida from './components/carta/cartaAnidada/Comida.js';
 import { Fragment } from 'react';
+import Footer from './components/footer/Footer';
+
+// import { Anchor } from 'antd';
+
+// const { Link } = Anchor;
 
 function App() {
   return (
     <Fragment>
-
+                
     <Navbar />
+                
     <div className='container'>
       <Routes>
 
@@ -30,6 +36,8 @@ function App() {
 
       </Routes>
     </div>
+
+    <Footer />
 
     </Fragment>
   );

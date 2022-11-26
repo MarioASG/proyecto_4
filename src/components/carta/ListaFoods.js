@@ -7,7 +7,7 @@ const ListaFoods = () => {
             id: 1,
             nombre: 'Chicken Fries',
             descripcion: 'Papitas de pollo con salsa melancólica',
-            precio: '$9600',
+            precio: '$9.600',
             imgFood: '/assets/foods/1.png'
         },
         {

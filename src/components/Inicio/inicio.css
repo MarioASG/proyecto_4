@@ -15,7 +15,6 @@
     font-size: 25px;
     position: absolute;
     margin-top: 250px;
-    margin-right: 600px;
 }
 
 .descripcionInicio h1{
@@ -33,8 +32,7 @@
 }
 
 .imgInicioPadre{
-    margin-left: 400px;
-
+    margin-right: 200px;
 }
 
 .imgInicio{
@@ -46,15 +44,21 @@
 
 /* SECCIÓN HISTORIA */
 
+.seccionHistoria{
+    background-color: #282c34;
+}
+
 .historiaInicio{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    background-color: #282c34;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px; 
     text-align: center;
+    width: 800px;
+    margin: auto;
 }
 
 .historiaInicio img{
@@ -64,7 +68,6 @@
 }
 
 .historiaInicio p{
-    width: 800px;
     color: aliceblue;
 }
 
@@ -72,3 +75,68 @@
     color: #dfc15e;
 }
 
+
+/* Mediaquerys */
+
+@media screen and (max-width: 1200px){
+    .descripcionInicio h1, .descripcionInicio h2{
+      font-size: 32px;
+      width: 550px;
+    }
+  }
+  
+  @media screen and (max-width: 990px){
+    .imgInicio{
+          width: 550px;
+    }
+  }
+  @media screen and (max-width: 770px){
+      .bar-bootcamp{
+        display: none;
+      }
+      .logoNav{
+        display: block;
+    }
+    .imgInicio{
+        width: 380px;
+  }
+
+  .imgInicioPadre{
+    margin-left: 200px;
+}
+
+    .descripcionInicio h1, .descripcionInicio h2{
+      width: 350px;
+      font-size: 25px;
+    }
+  }
+  
+  @media screen and (min-width: 770px){
+    .bar-bootcamp{
+      display: block;
+    }
+    .logoNav{
+      display: none;
+    }
+  }
+  
+  /* Media Historia */
+  
+  
+  @media screen and (max-width: 1200px){
+  .historiaInicio p{
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 990px){
+    .historiaInicio{
+      width: 700px;
+    }
+  }
+  @media screen and (max-width: 770px){
+    .historiaInicio{
+      width: 350px;
+    }
+  }
+  
