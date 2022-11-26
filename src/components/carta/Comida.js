@@ -1,5 +1,5 @@
 import React from 'react'
-import ListaFoods from '../ListaFoods'
+import ListaFoods from './ListaFoods'
 
 const Comida = () => {
   return (
