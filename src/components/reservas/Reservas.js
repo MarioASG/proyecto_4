@@ -1,8 +1,8 @@
 import { Tab, Tabs } from "react-bootstrap";
 import FormularioReservas from "./FormularioReservas";
 import TusReservas from "./TusReservas";
-import "./reservas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./reservas.css";
 
 export default function Reservacion() {
   return (

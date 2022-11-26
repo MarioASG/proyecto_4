@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import React from "react";
+import { collection, getDocs, where, query} from "firebase/firestore";
 import {  useState } from "react";
-import { Container, Form, Table  } from "react-bootstrap";
+import { Container, Form, Table, Spinner, Button  } from "react-bootstrap";
 import { db } from "../../database/firebase";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./reservas.css";
@@ -11,85 +11,73 @@ const queryCorreo = React.createRef();
 
 export default function TusReservas() {
   const [reservas, setReservas] = useState([]);
-  const [loadingData, setLoadingData] = useState();
+  const [loadingData, setLoadingData] = useState( false );
 
-  useEffect(()=> {
-  const obtenerReservaciones = async () => {
+  const obtenerReservaciones = async ( cliente, correo ) => {
+    setLoadingData( true );
+    const restricciones = [ where( 'nombreCliente', '==', cliente ), where( 'correoCliente', '==', correo ) ];
     const reservasCollectionRef = collection(db, "Reservas");
-    const querySnapshot = await getDocs(reservasCollectionRef);
-    const reservas = querySnapshot.docs.map((doc) => {
+    const q = query( reservasCollectionRef, ...restricciones )
+    const querySnapshot = await getDocs(q);
+    const misReservas = querySnapshot.docs.map((doc) => {
       return { id: doc.id, ...doc.data() };
     });
-    setReservas(reservas);
+    setReservas(misReservas);
     setLoadingData(false);
   };
-  try {
-    obtenerReservaciones();
-  } catch (error) {
-    setLoadingData(false);
-    console.error(error);
-  }
-  },[])
-
-  const revisadas = reservas.filter(reserva => reserva.nombreCliente == queryCliente.current.value);
   
-
-
-
   return (
-    <Container>
-      <p>A continuación, podrá ver el listado de reservaciones realizadas</p>
-      {loadingData ? (
-        console.log('Cargando')
-      ) : (
-        <Table className="tusReservas justify-content-md-center" striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>
-                <Form.Group className="mb-3" id="queryCliente">
-                  <Form.Control
-                    ref={queryCliente}
-                    type="text"
-                    placeholder="Nombre"
-                  ></Form.Control>
-                </Form.Group>
-                <Form.Group className="mb-3" id="queryCorreo">
-                  <Form.Control
-                    ref={queryCorreo}
-                    type="email"
-                    placeholder="Correo Electrónico"
-                  ></Form.Control>
-                </Form.Group>
-                
-              </th>
-            </tr>
-            
-          </thead>
-          <tbody>
-            {reservas.length === 0 ? (
-              <tr>
-                <td colSpan={4}>Cargando...</td>
-              </tr>
-            ) : (
-                          
-              revisadas.map((reserva) => (
-                <tr key={reserva.id}>
-                  <td>
-                    {reserva.nombreCliente == queryCliente.current.value && reserva.correoCliente == queryCorreo.current.value ? 
-                    (
-                      <p>Tiene una reserva para el dia {reserva.fechaReserva}, para {reserva.cantidadPersonas} personas </p>
-                    ) : 
-                    (
-                      <p>No exiten reservas, o algún campo está incorrecto</p>
-                    )}
-                  </td>
-                  
-                </tr>
-              ))
-            )}
-          </tbody>
-        </Table>
-      )}
+    <Container className="tusReservas">
+      <Container className="tituloReservas">
+      <p>Ingresa tus datos para verificar tus reservas</p>
+      </Container>
+      <Form>
+        <Form.Group className="mb-3" id="queryCliente">
+          <Form.Control
+            ref={ queryCliente }
+            type="text"
+            placeholder="Nombre"
+            required
+          ></Form.Control>
+        </Form.Group>
+        <Form.Group className="mb-3" id="queryCorreo">
+          <Form.Control
+            ref={ queryCorreo }
+            type="email"
+            placeholder="Correo Electrónico"
+            required
+          ></Form.Control>
+        </Form.Group>
+        <Form.Group className="mb-3 btn" id="querySubmit">
+        <Button variant="warning" type="submit" onClick={ () => obtenerReservaciones( queryCliente.current.value.toUpperCase(), queryCorreo.current.value.toLowerCase() ) }>Solicitar Información</Button>
+        </Form.Group>
+        
+      </Form>
+      {
+        loadingData ? (
+          <Spinner animation="border" role="status">
+          </Spinner>
+        ) : (
+          <Table className="justify-content-md-center mt-4" striped bordered hover variant="dark">
+            <tbody>
+              {
+                reservas.length === 0 ? (
+                  <tr>
+                    <td colSpan={ 4 }>No tienes reservas</td>
+                  </tr>
+                ) : (
+                  reservas.map( ( reserva ) => (
+                    <tr key={ reserva.id }>
+                      <td>
+                        <p>Tiene una reserva para el dia { reserva.fechaReserva }, para { reserva.cantidadPersonas } personas </p>
+                      </td>
+                    </tr>
+                  ) )
+                ) }
+            </tbody>
+          </Table>
+        )
+      }
     </Container>
   );
 }

@@ -10,10 +10,8 @@ import Bebidas from './components/carta/cartaAnidada/Bebidas';
 import Comida from './components/carta/cartaAnidada/Comida.js';
 import { Fragment } from 'react';
 import Footer from './components/footer/Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// import { Anchor } from 'antd';
-
-// const { Link } = Anchor;
 
 function App() {
   return (

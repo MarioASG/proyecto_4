@@ -1,26 +1,50 @@
-
 .container {
-    
     margin: 0;
     padding: 0;
 }
-.formReserva {
-    padding-top: 250px;
-   
-}
+.btn {
+    display:flex;
+    justify-content:center;
+    align-self:center;
+  }
 
 .tabsReservas {
-    margin-top: 100px;
+    margin-top: 100px;  
     width: 100% ;
-   
-       
-    
+    border: 0;
+    background-color: #dfc15ecb;
+    font-size: x-large;
 }
 
 .tusReservas  {
-    padding-top: 500px;
-    margin-top: 250px;
+    padding-top: 200px;
+    margin-bottom: 100px;
     justify-items: flex-end;
-    margin-left: 25%;
-    max-width: 45vw;
+    margin-left: 30%;
+    max-width: 50vw;
 }
+
+.tituloReservas {
+    color: white;
+    background-color: rgba(194, 197, 151, 0.182);
+    font-size: larger;
+    text-align: center;
+    margin: 0;
+    margin-top: 15px;
+    max-width: 60%;
+}
+
+.nav-link {
+    color: black;
+    width: 45%;
+   
+}
+
+.nav-item {
+    margin-inline: 2%
+}
+
+.nav {
+--bs-nav-link-hover-color: white;
+}
+

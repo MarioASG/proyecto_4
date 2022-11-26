@@ -15,17 +15,27 @@ const leerReservas = async (coleccion) => {
 }
 
 const guardarReserva = async (coleccion, nombreCliente, correoCliente, cantidadPersonas, fechaReserva ) => {
-  try {
-    await addDoc(collection(db, coleccion),
-      {
-        nombreCliente: nombreCliente,
-        correoCliente: correoCliente,
-        cantidadPersonas: cantidadPersonas,
-        fechaReserva: fechaReserva
-      });
-  } catch (error) {
-    console.log("Error registrando reserva ", error);
+  if (nombreCliente.length > 0 && correoCliente.length > 0 && cantidadPersonas.length > 0 && fechaReserva.length > 0 ) {
+    leerReservas();
+    console.log(leerReservas());
+
+    try {
+      await addDoc(collection(db, coleccion),
+        {
+          nombreCliente: nombreCliente.toUpperCase(),
+          correoCliente: correoCliente.toLowerCase(),
+          cantidadPersonas: cantidadPersonas,
+          fechaReserva: fechaReserva
+        }).then(alert('Reserva lograda! Nos vemos (:'));
+    } catch (error) {
+      console.log("Error registrando reserva ", error);
+    }
+    
+  } else {
+    alert('Complete todos los campos')
+    
   }
+
 }
 
 

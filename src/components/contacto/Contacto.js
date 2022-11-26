@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
 
 import { Row, Col, Form, Button, Container} from 'react-bootstrap'
 import { COLECCION, leerMensajes, guardarMensaje } from "./ContactoDB";
-import "bootstrap/dist/css/bootstrap.min.css"
-// import "./reservas.css";
+
+import "../reservas/reservas.css";
 
 const nombreClienteM = React.createRef();
 const correoClienteM = React.createRef();
@@ -32,8 +31,10 @@ const FormularioContacto = () => {
   
 
   return (
-    <Container>
-        
+    <Container className="tusReservas">
+        <Container className="tituloReservas">
+      <p>Dejanos tus comentarios y sugerencias, los reclamos se atienden en persona 🔪☠🔪</p>
+      </Container>
       <Row className="justify-content-md-center formReserva">
       <Col xs lg="6">
         <Form>
@@ -47,8 +48,8 @@ const FormularioContacto = () => {
             <Form.Control ref={mensaje} as="textarea" rows={4} placeholder="Tu mensaje"></Form.Control>
           </Form.Group>
          
-          <Form.Group className="mb-3" id="formSubmit">
-            <Button onClick={() => agregarMensaje()} variant="primary" type="button">Enviar!</Button>
+          <Form.Group className="mb-3 btn" id="contactFormSubmit">
+              <Button onClick={() => agregarMensaje()} variant="secondary" type="button">Enviar!</Button>
           </Form.Group>
         </Form>
       </Col>
