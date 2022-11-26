@@ -1,5 +1,4 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
+import React, { Fragment } from "react";
 
 import { Row, Col, Form, Button, Container} from 'react-bootstrap'
 import { COLECCION, guardarReserva, leerReservas } from "./ReservasDB";
@@ -33,7 +32,7 @@ const FormularioReservas = () => {
   
 
   return (
-    <Container>
+    <Fragment>
         
       <Row className="justify-content-md-center formReserva">
       <Col xs lg="6">
@@ -51,13 +50,13 @@ const FormularioReservas = () => {
             <Form.Control ref={fechaReserva} type="date" placeholder="Elija la fecha"></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3" id="formSubmit">
-            <Button onClick={() => agregarReserva()} variant="primary" type="button">Reserva!!</Button>
+            <Button className= "text-center" onClick={() => agregarReserva()} variant="primary" type="button">Reserva!!</Button>
           </Form.Group>
         </Form>
       </Col>
     </Row>
       
-    </Container>
+    </Fragment>
   );
 
 };

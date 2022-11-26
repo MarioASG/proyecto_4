@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { useEffect, useState } from "react";
-import { Container, Spinner, Table, Form, Button } from "react-bootstrap";
+import {  useState } from "react";
+import { Container, Form, Table  } from "react-bootstrap";
 import { db } from "../../database/firebase";
-import "./reservas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./reservas.css";
 
 const queryCliente = React.createRef();
 const queryCorreo = React.createRef();
@@ -13,6 +13,7 @@ export default function TusReservas() {
   const [reservas, setReservas] = useState([]);
   const [loadingData, setLoadingData] = useState();
 
+  useEffect(()=> {
   const obtenerReservaciones = async () => {
     const reservasCollectionRef = collection(db, "Reservas");
     const querySnapshot = await getDocs(reservasCollectionRef);
@@ -28,8 +29,12 @@ export default function TusReservas() {
     setLoadingData(false);
     console.error(error);
   }
+  },[])
 
+  const revisadas = reservas.filter(reserva => reserva.nombreCliente == queryCliente.current.value);
   
+
+
 
   return (
     <Container>
@@ -37,7 +42,7 @@ export default function TusReservas() {
       {loadingData ? (
         console.log('Cargando')
       ) : (
-        <Table className="tusReservas" striped bordered hover variant="dark">
+        <Table className="tusReservas justify-content-md-center" striped bordered hover variant="dark">
           <thead>
             <tr>
               <th>
@@ -63,18 +68,19 @@ export default function TusReservas() {
           <tbody>
             {reservas.length === 0 ? (
               <tr>
-                <td colSpan={4}>No hay reservas</td>
+                <td colSpan={4}>Cargando...</td>
               </tr>
             ) : (
-              reservas.map((reserva) => (
+                          
+              revisadas.map((reserva) => (
                 <tr key={reserva.id}>
                   <td>
-                    {reserva.nombreCliente == queryCliente.current.value || reserva.correoCliente == queryCorreo.current.value ? 
+                    {reserva.nombreCliente == queryCliente.current.value && reserva.correoCliente == queryCorreo.current.value ? 
                     (
                       <p>Tiene una reserva para el dia {reserva.fechaReserva}, para {reserva.cantidadPersonas} personas </p>
                     ) : 
                     (
-                      <p>No hay reservas con tu nombre o correo</p>
+                      <p>No exiten reservas, o algún campo está incorrecto</p>
                     )}
                   </td>
                   
