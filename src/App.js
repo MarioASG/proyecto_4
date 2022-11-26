@@ -11,10 +11,6 @@ import Comida from './components/carta/Comida.js';
 import { Fragment } from 'react';
 import Footer from './components/footer/Footer';
 
-// import { Anchor } from 'antd';
-
-// const { Link } = Anchor;
-
 function App() {
   return (
     <Fragment>
