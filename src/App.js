@@ -6,12 +6,10 @@ import Carta from './components/carta/Carta';
 import Reservas from './components/reservas/Reservas';
 import Contacto from './components/contacto/Contacto';
 import Navbar from './components/Navbar/Navbar';
-import Bebidas from './components/carta/cartaAnidada/Bebidas';
-import Comida from './components/carta/cartaAnidada/Comida.js';
+import Bebidas from './components/carta/Bebidas';
+import Comida from './components/carta/Comida.js';
 import { Fragment } from 'react';
 import Footer from './components/footer/Footer';
-import "bootstrap/dist/css/bootstrap.min.css";
-
 
 function App() {
   return (
