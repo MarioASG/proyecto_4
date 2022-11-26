@@ -6,13 +6,13 @@ const Inicio = () => {
       <div className='descripcionInicioPadre'>
         <div className='descripcionInicio'>
 
-          <h1>BAR BOOTCAMP</h1>
+          <h1> BAR BOOTCAMP</h1>
           <h2>PARA VIVIR EL PRESENTE</h2>
           <h2>HAY QUE BEBERSE EL PASADO</h2>
 
         </div>
         <div className='imgInicioPadre'>
-          <img src='assets/3.png' className='imgInicio'/>
+          <img src='assets/3.png' className='imgInicio' alt='resLogo'/>
         </div>
 
       </div>
@@ -25,7 +25,7 @@ const Inicio = () => {
            Hierro, el primer Pub se construyó durante el reinado de David I (r. 1124-1153) 
            y continuó como residencia real hasta 1633, para finalmente convertirse en lo que 
            hoy conocemos como Bar BootCamp</p>
-        <img src='assets/Logo.png' className='logo'/>
+        <img src='assets/Logo.png' className='logo' alt='logo'/>
         <h3>SANTIAGO, CHILE</h3>
 
       </div>

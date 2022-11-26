@@ -5,6 +5,7 @@
     margin: auto;
     padding: 100px;
     padding-top: 200px;
+    min-width: 100vw;
 }
 .descripcionInicio{
     display: flex;
@@ -23,11 +24,12 @@
     height: 60px;
     align-items: center;
     margin-bottom: 45px;
+    margin-left: 15px;
     box-shadow: 0 15px 15px #000000;
 }
 
 .descripcionInicio h2{
-    margin-top: -27px;
+    margin-top: 25px;
     text-shadow: 4px 4px 8px #000000;
 }
 
@@ -42,10 +44,15 @@
         
 }
 
+.bar-bootcamp{
+  margin-left: 20px;
+}
+
 /* SECCIÓN HISTORIA */
 
 .seccionHistoria{
     background-color: #282c34;
+    min-width: 100vw;
 }
 
 .historiaInicio{

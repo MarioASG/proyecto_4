@@ -8,6 +8,7 @@
     'a b c'
     'd e f'
     'g h i';
+    min-width: 100vw;
 }
 
 .carta{
@@ -20,7 +21,9 @@
     background-image: url(https://wallpaperaccess.com/full/804379.jpg);
     background-repeat: no-repeat;
     background-position: cover;
+    background-size: cover;
     padding-top: 100px;
+    min-width: 100vw;
 }
 
 .cartaPadre h1{
@@ -32,6 +35,7 @@
     height: 50px;
     display: flex;
     align-items: center;
+    
 }
 
 .presentacionCarta{
@@ -56,7 +60,9 @@
     border-style: dotted;
     height: 50px;
 }
-
+.bar-inicio{
+    margin-left: 15px;
+}
 /* Querys */
     
     @media screen and (max-width: 990px){
