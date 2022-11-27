@@ -1,13 +1,15 @@
 {
-  "files": {
-    "main.css": "/proyecto_4/static/css/main.aea7afbd.css",
-    "main.js": "/proyecto_4/static/js/main.78c72d1f.js",
-    "index.html": "/proyecto_4/index.html",
-    "main.aea7afbd.css.map": "/proyecto_4/static/css/main.aea7afbd.css.map",
-    "main.78c72d1f.js.map": "/proyecto_4/static/js/main.78c72d1f.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.aea7afbd.css",
-    "static/js/main.78c72d1f.js"
-  ]
+  "main.css": "/bootbar/static/css/main.44f2a994.chunk.css",
+  "main.js": "/bootbar/static/js/main.2c5d505f.chunk.js",
+  "main.js.map": "/bootbar/static/js/main.2c5d505f.chunk.js.map",
+  "static/css/1.bded932c.chunk.css": "/bootbar/static/css/1.bded932c.chunk.css",
+  "static/js/1.948fffa9.chunk.js": "/bootbar/static/js/1.948fffa9.chunk.js",
+  "static/js/1.948fffa9.chunk.js.map": "/bootbar/static/js/1.948fffa9.chunk.js.map",
+  "runtime~main.js": "/bootbar/static/js/runtime~main.2eb12f7c.js",
+  "runtime~main.js.map": "/bootbar/static/js/runtime~main.2eb12f7c.js.map",
+  "static/css/main.44f2a994.chunk.css.map": "/bootbar/static/css/main.44f2a994.chunk.css.map",
+  "static/css/1.bded932c.chunk.css.map": "/bootbar/static/css/1.bded932c.chunk.css.map",
+  "index.html": "/bootbar/index.html",
+  "precache-manifest.cb0df11eb91649a56439a00ceb363c01.js": "/bootbar/precache-manifest.cb0df11eb91649a56439a00ceb363c01.js",
+  "service-worker.js": "/bootbar/service-worker.js"
 }
