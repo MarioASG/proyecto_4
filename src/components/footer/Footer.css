@@ -24,11 +24,11 @@
     color: aliceblue;
 }
 
-.footer a:hover{
+.footer button:hover{
     transform: scale(1.05);
     transition: 0.3s;
     font-weight: bold;
-    color: #026c8a;
+    color: #ededed;
 }
 
 .contacto, .informate{
@@ -46,7 +46,16 @@
     height: 300px;
     width: 150px;
 }
+* h2 {
+    text-align: center;
 
+}
+* button {
+    background-color: #1f1c1c;
+    color: #dfc15e;
+    border: none;
+    
+    }
 .icons{
     align-items: center;
 }

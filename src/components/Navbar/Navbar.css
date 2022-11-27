@@ -29,6 +29,10 @@ body{
     text-decoration: none;
 }
 
+.nav a:hover{
+    color: #ededed
+}
+
 .bar-bootcamp, .bar-inicio{
     font-size: 50px;
 }
