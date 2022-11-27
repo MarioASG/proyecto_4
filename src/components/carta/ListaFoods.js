@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Tarjeta from './Tarjeta';
 
 const ListaFoods = () => {
-    const [foods, setFoods] = useState([
+    const foods = [
         {
             id: 1,
             nombre: 'Chicken Fries',
@@ -66,7 +66,7 @@ const ListaFoods = () => {
             precio: '$10.900',
             imgFood: '/assets/foods/9.png'
         },
-    ])
+    ]
 return(
     <div className='listaDrinks'>
         {foods.map((food =>{
