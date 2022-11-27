@@ -33,8 +33,8 @@ const FormularioContacto = () => {
     <Container className="tusReservas">
       <Container className="tituloReservas">
         <p>
-          Dejanos tus comentarios y sugerencias, los reclamos se atienden en
-          persona 🔪☠🔪
+          Dejanos tus comentarios y sugerencias, los reclamos se resuelven en
+          persona 
         </p>
       </Container>
       <Row className="justify-content-md-center formReserva">

@@ -11,60 +11,60 @@ const Footer = () => {
               <div className="contacto">
       
                 <h2>CONTACTO</h2>
-                <a href="#">Contáctanos</a>
-                <a href="#">Preguntas Frecuentes</a>
-                <a href="#">Trabaja con Nosotros</a>
-                <a href="#">Cambios y Devoluciones</a>
-                <a href="#">Nuestros Locales</a>
+                <button href="#">Contáctanos</button>
+                <button href="#">Preguntas Frecuentes</button>
+                <button href="#">Trabaja con Nosotros</button>
+                <button href="#">Cambios y Devoluciones</button>
+                <button href="#">Nuestros Locales</button>
        
               </div>
     
               <div className="informate">
       
                 <h2>INFÓRMATE</h2>
-                <a href="#">Términos y Condiciones</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Cómo Funciona el Sitio</a>
-                <a href="#">Aceptación de Cookies</a>
-                <a href="#">Ayuda para Proyecto Gratuito</a>
+                <button href="#">Términos y Condiciones</button>
+                <button href="#">Política de Privacidad</button>
+                <button href="#">Cómo Funciona el Sitio</button>
+                <button href="#">Aceptación de Cookies</button>
+                <button href="#">Ayuda para Proyecto Gratuito</button>
                 
               </div>
     
               <div className="ayuda">
       
                 <h2>AYUDA</h2>
-                <a href="#">Privacidad</a>
-                <a href="#">Centro de Ayuda</a>
-                <a href="#">Accesibilidad</a>
+                <button href="#">Privacidad</button>
+                <button href="#">Centro de Ayuda</button>
+                <button href="#">Accesibilidad</button>
       
               </div>
 
               <div className="icons">
       
                 <h2>REDES</h2>
-                <a href="#">
+                <button href="#">
 
                 <div className='icon' style={{fontSize:'30px', color:'gray'}}>
                 <FontAwesomeIcon icon={faFacebook} />
                 </div>
 
-                </a>
+                </button>
 
-                <a href="#">
+                <button href="#">
 
                 <div className='icon' style={{fontSize:'30px', color:'gray'}}>
                 <FontAwesomeIcon icon={faInstagram} />
                 </div>
 
-                </a>
+                </button>
 
-                <a href="#">
+                <button href="#">
 
                 <div className='icon' style={{fontSize:'30px', color:'gray'}}>
                 <FontAwesomeIcon icon={faTwitter} />
                 </div>
 
-                </a>
+                </button>
                 
       
               </div>

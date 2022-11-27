@@ -9,7 +9,7 @@ const Navbar = () => {
             Bar BootCamp
             
         </Link>
-        <img src='assets/Logo.png' className='logoNav'/>
+        <img src='assets/Logo.png' className='logoNav' alt='logoNav'/>
         <ul>
 
             <CustomLink to='/'>Inicio</CustomLink>
